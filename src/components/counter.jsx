@@ -6,17 +6,15 @@ class Counter extends Component {
         tags: ['tag1', 'tag2', 'tag3']
     }
 
-    // styles = {
-    //     fontSize: 50,
-    //     fontWeight: 700
-    // };
+    handleIncrement() {
+        console.log('Increment Clicked');
+    }
 
     render() {         
         return (
         <>
             <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-            <button className='btn btn-secondary btn-sm'>Increment</button>
-            <ul>{this.state.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
+            <button onClick={this.handleIncrement} className='btn btn-secondary btn-sm'>Increment</button>
         </>);
     }
 
