@@ -13,6 +13,15 @@ class App extends Component {
     ],
   };
 
+  constructor() {
+    console.log('Constructor');
+    super();
+  }
+
+  componentDidMount() {
+    console.log('App is mounted');
+  }
+
   handleIncrement = (counter) => {
     const counters = [...this.state.counters];
     const index = counters.indexOf(counter);
@@ -35,6 +44,7 @@ class App extends Component {
   }
 
   render() {
+    console.log('App is rendered');
     return (
       <>
         <NavBar
